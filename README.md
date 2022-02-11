@@ -1,8 +1,45 @@
 # integrationtestapp
 
-Flutter Project with integration test
+Flutter Project with integration test example.
 
-## Getting Started
+## Setup integration test
+
+1. Add dependency in pubspec.yml
+ dev_dependencies:
+   integration_test:
+     sdk: flutter
+   flutter_test:
+     sdk: flutter
+
+2. Create "integration_test" directory if not present.
+ integrationtestapp
+ |
+ |__integration_test
+ |__lib
+
+3. Initialize singleton service inside the test file inside main()
+ ```
+ IntegrationTestWidgetsFlutterBinding.ensureInitialized();
+ ```
+
+4. Use widgetTester to interact and test
+
+## Run test
+
+1. Connect a device or use Emulator/Simulator
+
+2. To run a single test file
+ ```
+ flutter test integration_test\file_name.dart
+ ```
+
+3. To run all the test files
+ ```
+ flutter test integration_test
+ ```
+
+
+### Getting Started
 
 This project is a starting point for a Flutter application.
 
